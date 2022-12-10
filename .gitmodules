@@ -1,0 +1,18 @@
+[submodule "Gazel/vendor/spdlog"]
+	path = Gazel/vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "Gazel/vendor/GLFW"]
+	path = Gazel/vendor/GLFW
+	url = https://github.com/glfw/glfw
+[submodule "Gazel/vendor/imgui"]
+	path = Gazel/vendor/imgui
+	url = https://github.com/ocornut/imgui
+[submodule "Gazle/vender/glm"]
+	path = Gazle/vender/glm
+	url = https://github.com/g-truc/glm
+[submodule "Gazel/vender/glm"]
+	path = Gazel/vender/glm
+	url = https://github.com/g-truc/glm
+[submodule "Gazel/vendor/glm"]
+	path = Gazel/vendor/glm
+	url = https://github.com/g-truc/glm
