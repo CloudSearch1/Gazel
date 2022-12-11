@@ -10,5 +10,7 @@
 
 4、texture和shader可能坏了，需要fix------bug fixed
 
-5、camera的a和d键有时候会相反
+5、camera的a和d键有时候会相反------bug fixed
+
+
 
