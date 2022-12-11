@@ -159,10 +159,12 @@
     <ClInclude Include="src\Gazel\Core\Timer.h" />
     <ClInclude Include="src\Gazel\Core\Timestep.h" />
     <ClInclude Include="src\Gazel\Core\Window.h" />
+    <ClInclude Include="src\Gazel\Debug\Instrumentor.h" />
     <ClInclude Include="src\Gazel\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Gazel\Events\Event.h" />
     <ClInclude Include="src\Gazel\Events\KeyEvent.h" />
     <ClInclude Include="src\Gazel\Events\MouseEvent.h" />
+    <ClInclude Include="src\Gazel\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Gazel\Renderer\Buffer.h" />
     <ClInclude Include="src\Gazel\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Gazel\Renderer\OrthographicCamera.h" />
@@ -606,6 +608,8 @@
     <ClCompile Include="src\Gazel\Core\Layer.cpp" />
     <ClCompile Include="src\Gazel\Core\LayerStack.cpp" />
     <ClCompile Include="src\Gazel\Core\Log.cpp" />
+    <ClCompile Include="src\Gazel\ImGui\ImGuiBuild.cpp" />
+    <ClCompile Include="src\Gazel\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Gazel\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Gazel\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Gazel\Renderer\OrthographicCameraController.cpp" />

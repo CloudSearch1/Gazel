@@ -15,6 +15,7 @@
 #include <unordered_set>
 
 #include"Gazel/Core/Log.h"
+#include"Gazel/Debug/Instrumentor.h"
 
 #ifdef GZ_PLATFORM_WINDOWS
 #include <Windows.h>

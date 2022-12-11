@@ -1,48 +1,49 @@
 #pragma once
-#include"Core.h"
 
-#include"Gazel/Events/Event.h"
-#include"Gazel/Core/Window.h"
-#include"Gazel/Events/ApplicationEvent.h"
-#include"LayerStack.h"
-//#include"Gazel/ImGui/ImGuiLayer.h"
+#include "Gazel/Core/Core.h"
 
-#include"Gazel/Renderer/Shader.h"
-#include <Gazel/Renderer/Buffer.h>
-#include"Gazel/Renderer/VertexArray.h"
-#include"Gazel/Renderer/OrthographicCamera.h"
-#include"Gazel/Core/Timestep.h"
+#include "Gazel/Core/Window.h"
+#include "Gazel/Core/LayerStack.h"
+#include "Gazel/Events/Event.h"
+#include "Gazel/Events/ApplicationEvent.h"
+
+#include "Gazel/Core/Timestep.h"
+
+#include "Gazel/ImGui/ImGuiLayer.h"
 
 namespace Gazel {
-	//__declspec(dllexport) GAZEL_API
-	class GAZEL_API Application
-	{
-	public:
-		Application();
-		virtual ~Application();
 
-		void OnEvent(Event& e);
-		void Run();
-		
-		void PushLayer(Layer* layer);
-		void PushOverlay(Layer* layer);
-		
-		inline static Application& Get() { return *s_Instance; }
-		inline Window& GetWindow() { return *m_Window; }
-	private:
-		bool OnWindowClose(WindowCloseEvent& e);
-		bool OnWindowResize(WindowResizeEvent& e);
+  class Application
+  {
+  public:
+    Application();
+    virtual ~Application();
+
+    void Run();
+
+    void OnEvent(Event& e);
+
+    void PushLayer(Layer* layer);
+    void PushOverlay(Layer* layer);
+
+    inline Window& GetWindow() { return *m_Window; }
+
+    inline static Application& Get() { return *s_Instance; }
   private:
-		std::unique_ptr<Window> m_Window;
-		bool m_Running = true;
+    bool OnWindowClose(WindowCloseEvent& e);
+    bool OnWindowResize(WindowResizeEvent& e);
+  private:
+    std::unique_ptr<Window> m_Window;
+    ImGuiLayer* m_ImGuiLayer;
+    bool m_Running = true;
     bool m_Minimized = false;
-		LayerStack m_LayerStack;
-		//ImGuiLayer* m_ImGuiLayer;
+    LayerStack m_LayerStack;
     float m_LastFrameTime = 0.0f;
-	private:
-		static Application* s_Instance;
+  private:
+    static Application* s_Instance;
+  };
 
-	};
-	Application* CreateApplication();
+  // To be defined in CLIENT
+  Application* CreateApplication();
+
 }
-
