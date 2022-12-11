@@ -19,7 +19,7 @@ git clone https://github.com/CloudSearch1/Gazel
 
 Gazel是一个基于OpenGL与Vulkan的游戏引擎。
 
-[game1.png](https://github.com/CloudSearch1/Gazel/blob/master/images/game1.png)
+![game1.png](https://github.com/CloudSearch1/Gazel/blob/master/images/game1.png)
 
 仅支持平台-Window
 
