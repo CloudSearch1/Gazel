@@ -1505,5 +1505,8 @@
     <ClCompile Include="src\Gazel\ImGui\ImGuiLayer.cpp">
       <Filter>src\ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gazel\Renderer\GraphicsContext.cpp">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

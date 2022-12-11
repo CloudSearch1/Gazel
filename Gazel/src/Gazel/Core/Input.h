@@ -4,7 +4,7 @@
 
 namespace Gazel {
 
-  class GAZEL_API Input
+  class Input
   {
   protected:
     Input() = default;

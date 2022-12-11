@@ -611,6 +611,7 @@
     <ClCompile Include="src\Gazel\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Gazel\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Gazel\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Gazel\Renderer\GraphicsContext.cpp" />
     <ClCompile Include="src\Gazel\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Gazel\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Gazel\Renderer\RenderCommand.cpp" />

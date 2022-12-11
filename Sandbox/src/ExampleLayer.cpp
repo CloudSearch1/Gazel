@@ -16,8 +16,7 @@ ExampleLayer::ExampleLayer()
      0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
   };
 
-  Gazel::Ref<Gazel::VertexBuffer> vertexBuffer;
-  vertexBuffer.reset(Gazel::VertexBuffer::Create(vertices, sizeof(vertices)));
+  Gazel::Ref<Gazel::VertexBuffer> vertexBuffer=(Gazel::VertexBuffer::Create(vertices, sizeof(vertices)));
   Gazel::BufferLayout layout = {
     { Gazel::ShaderDataType::Float3, "a_Position" },
     { Gazel::ShaderDataType::Float4, "a_Color" }
@@ -26,8 +25,7 @@ ExampleLayer::ExampleLayer()
   m_VertexArray->AddVertexBuffer(vertexBuffer);
 
   uint32_t indices[3] = { 0, 1, 2 };
-  Gazel::Ref<Gazel::IndexBuffer> indexBuffer;
-  indexBuffer.reset(Gazel::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+  Gazel::Ref<Gazel::IndexBuffer> indexBuffer=(Gazel::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
   m_VertexArray->SetIndexBuffer(indexBuffer);
 
   m_SquareVA = Gazel::VertexArray::Create();
@@ -39,8 +37,7 @@ ExampleLayer::ExampleLayer()
     -0.5f,  0.5f, 0.0f, 0.0f, 1.0f
   };
 
-  Gazel::Ref<Gazel::VertexBuffer> squareVB;
-  squareVB.reset(Gazel::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+  Gazel::Ref<Gazel::VertexBuffer> squareVB=(Gazel::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
   squareVB->SetLayout({
     { Gazel::ShaderDataType::Float3, "a_Position" },
     { Gazel::ShaderDataType::Float2, "a_TexCoord" }
@@ -48,8 +45,7 @@ ExampleLayer::ExampleLayer()
   m_SquareVA->AddVertexBuffer(squareVB);
 
   uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-  Gazel::Ref<Gazel::IndexBuffer> squareIB;
-  squareIB.reset(Gazel::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+  Gazel::Ref<Gazel::IndexBuffer> squareIB=(Gazel::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
   m_SquareVA->SetIndexBuffer(squareIB);
 
   std::string vertexSrc = R"(

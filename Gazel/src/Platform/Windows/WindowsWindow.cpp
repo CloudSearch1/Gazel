@@ -16,9 +16,9 @@ namespace Gazel {
     GZ_CORE_ERROR("GLFW Error ({0}): {1}", error, description);
   }
 
-  Window* Window::Create(const WindowProps& props)
+  Scope<Window> Window::Create(const WindowProps& props)
   {
-    return new WindowsWindow(props);
+    return CreateScope<WindowsWindow>(props);
   }
 
   WindowsWindow::WindowsWindow(const WindowProps& props)
@@ -50,7 +50,7 @@ namespace Gazel {
     m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
     ++s_GLFWWindowCount;
 
-    m_Context = CreateScope<OpenGLContext>(m_Window);
+    m_Context = GraphicsContext::Create(m_Window);
 
     m_Context->Init();
 
@@ -151,10 +151,9 @@ namespace Gazel {
   void WindowsWindow::Shutdown()
   {
     glfwDestroyWindow(m_Window);
-
-    if (--s_GLFWWindowCount == 0)
+    -s_GLFWWindowCount;
+    if (s_GLFWWindowCount == 0)
     {
-      GZ_CORE_INFO("Terminating GLFW");
       glfwTerminate();
     }
   }
