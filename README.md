@@ -13,7 +13,7 @@ git clone https://github.com/CloudSearch1/Gazel
 
 3->run make.bat to build the project
 
-4->run Gazel.sln to get Visual Studio 2022 progect.
+4->run Gazel.sln to get Visual Studio 2022 project.
 
 #### #关于Gazel
 
