@@ -10,8 +10,8 @@ class Sandbox : public Gazel::Application
 public:
   Sandbox()
   {
-    PushLayer(new GameLayer());
-    //PushLayer(new Sandbox2D());
+    //PushLayer(new GameLayer());
+    PushLayer(new Sandbox2D());
     //PushLayer(new ExampleLayer());
   }
 

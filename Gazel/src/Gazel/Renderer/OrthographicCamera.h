@@ -4,6 +4,7 @@
 
 namespace Gazel {
 
+
   class OrthographicCamera
   {
   public:

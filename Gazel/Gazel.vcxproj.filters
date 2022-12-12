@@ -1425,6 +1425,9 @@
     <ClInclude Include="src\Gazel\ImGui\ImGuiLayer.h">
       <Filter>src\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gazel\Renderer\SubTexture2D.h">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gazel\Core\Application.cpp">
@@ -1506,6 +1509,9 @@
       <Filter>src\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Gazel\Renderer\GraphicsContext.cpp">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gazel\Renderer\SubTexture2D.cpp">
       <Filter>src\Gazel\Renderer</Filter>
     </ClCompile>
   </ItemGroup>

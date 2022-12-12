@@ -6,6 +6,16 @@
 
 namespace Gazel
 {
+  //to delete
+  struct OrthographicCameraBounds
+  {
+    float Left, Right;
+    float Bottom, Top;
+
+    float GetWidth() { return Right - Left; }
+    float GetHeight() { return Top - Bottom; }
+  };
+
   class OrthographicCameraController
   {
   public:
@@ -21,6 +31,8 @@ namespace Gazel
 
     float GetZoomLevel() const { return m_ZoomLevel; }
     void SetZoomLevel(float level) { m_ZoomLevel = level; }
+
+    const OrthographicCameraBounds& GetBounds()const { return m_Bounds; }//to delete
   private:
     bool OnMouseScrolled(MouseScrolledEvent& e);
     bool OnWindowResized(WindowResizeEvent& e);
@@ -34,6 +46,9 @@ namespace Gazel
     glm::vec3 m_CameraPosition = { 0.0f, 0.0f, 0.0f };
     float m_CameraRotation = 0.0f; //In degrees, in the anti-clockwise direction
     float m_CameraTranslationSpeed = 5.0f, m_CameraRotationSpeed = 180.0f;
+
+
+    OrthographicCameraBounds m_Bounds;//to delete
   };
 
 
