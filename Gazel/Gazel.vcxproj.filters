@@ -10,11 +10,20 @@
     <Filter Include="src\Gazel\Core">
       <UniqueIdentifier>{274149A4-130F-3DAA-FCA2-ADD0E80F190F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Gazel\Debug">
+      <UniqueIdentifier>{25C17D2D-914C-EBF1-9A5D-6EE6066847F2}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Gazel\Events">
       <UniqueIdentifier>{7338C0E0-5F31-DF32-8863-C4B774BBBE3E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Gazel\ImGui">
+      <UniqueIdentifier>{D92BDC2D-45B7-49F2-4EC8-CCE6BAD2A5F2}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Gazel\Renderer">
       <UniqueIdentifier>{F52FAB08-E113-6C5E-4A74-66B1367756E0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Gazel\Scene">
+      <UniqueIdentifier>{CC238C2E-38AF-F9F2-41C0-7CE7ADCA55F3}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Platform">
       <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
@@ -49,12 +58,6 @@
     <Filter Include="vendor\stb_image">
       <UniqueIdentifier>{0DA0BA59-F998-D9AB-22CB-BE300E23B9B7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Debug">
-      <UniqueIdentifier>{73e82cb6-97a5-4ab9-b787-0fc5b1ca45fc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\ImGui">
-      <UniqueIdentifier>{3e08d2d5-72d6-4c33-9dcd-dea274da1a59}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Gazel.h">
@@ -87,6 +90,9 @@
     <ClInclude Include="src\Gazel\Core\MouseButtonCodes.h">
       <Filter>src\Gazel\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gazel\Core\MouseCodes.h">
+      <Filter>src\Gazel\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Gazel\Core\Timer.h">
       <Filter>src\Gazel\Core</Filter>
     </ClInclude>
@@ -95,6 +101,9 @@
     </ClInclude>
     <ClInclude Include="src\Gazel\Core\Window.h">
       <Filter>src\Gazel\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gazel\Debug\Instrumentor.h">
+      <Filter>src\Gazel\Debug</Filter>
     </ClInclude>
     <ClInclude Include="src\Gazel\Events\ApplicationEvent.h">
       <Filter>src\Gazel\Events</Filter>
@@ -108,7 +117,16 @@
     <ClInclude Include="src\Gazel\Events\MouseEvent.h">
       <Filter>src\Gazel\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gazel\ImGui\ImGuiLayer.h">
+      <Filter>src\Gazel\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Gazel\Renderer\Buffer.h">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gazel\Renderer\Camera.h">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gazel\Renderer\EditorCamera.h">
       <Filter>src\Gazel\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Gazel\Renderer\GraphicsContext.h">
@@ -135,11 +153,20 @@
     <ClInclude Include="src\Gazel\Renderer\Shader.h">
       <Filter>src\Gazel\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gazel\Renderer\SubTexture2D.h">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Gazel\Renderer\Texture.h">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gazel\Renderer\UniformBuffer.h">
       <Filter>src\Gazel\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Gazel\Renderer\VertexArray.h">
       <Filter>src\Gazel\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gazel\Scene\Components.h">
+      <Filter>src\Gazel\Scene</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
@@ -154,6 +181,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLUniformBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
@@ -1419,15 +1449,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gazel\Debug\Instrumentor.h">
-      <Filter>src\Debug</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Gazel\ImGui\ImGuiLayer.h">
-      <Filter>src\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Gazel\Renderer\SubTexture2D.h">
-      <Filter>src\Gazel\Renderer</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gazel\Core\Application.cpp">
@@ -1442,7 +1463,19 @@
     <ClCompile Include="src\Gazel\Core\Log.cpp">
       <Filter>src\Gazel\Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gazel\ImGui\ImGuiBuild.cpp">
+      <Filter>src\Gazel\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gazel\ImGui\ImGuiLayer.cpp">
+      <Filter>src\Gazel\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Gazel\Renderer\Buffer.cpp">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gazel\Renderer\EditorCamera.cpp">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gazel\Renderer\GraphicsContext.cpp">
       <Filter>src\Gazel\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Gazel\Renderer\OrthographicCamera.cpp">
@@ -1466,7 +1499,13 @@
     <ClCompile Include="src\Gazel\Renderer\Shader.cpp">
       <Filter>src\Gazel\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gazel\Renderer\SubTexture2D.cpp">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Gazel\Renderer\Texture.cpp">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gazel\Renderer\UniformBuffer.cpp">
       <Filter>src\Gazel\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Gazel\Renderer\VertexArray.cpp">
@@ -1487,6 +1526,9 @@
     <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLUniformBuffer.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
@@ -1501,18 +1543,6 @@
     </ClCompile>
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Gazel\ImGui\ImGuiBuild.cpp">
-      <Filter>src\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Gazel\ImGui\ImGuiLayer.cpp">
-      <Filter>src\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Gazel\Renderer\GraphicsContext.cpp">
-      <Filter>src\Gazel\Renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Gazel\Renderer\SubTexture2D.cpp">
-      <Filter>src\Gazel\Renderer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
