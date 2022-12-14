@@ -3,6 +3,7 @@
 #include "Gazel/Renderer/Shader.h"
 #include <glm/glm.hpp>
 
+
 // TODO: REMOVE!
 typedef unsigned int GLenum;
 
