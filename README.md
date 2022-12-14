@@ -8,7 +8,7 @@
 2->code this shell code to cmd
 
 ```shell
-git clone https://github.com/CloudSearch1/Gazel
+git clone --recursive https://github.com/CloudSearch1/Gazel
 ```
 
 3->run make.bat to build the project
