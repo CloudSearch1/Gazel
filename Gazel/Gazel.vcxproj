@@ -148,7 +148,7 @@
   <ItemGroup>
     <ClInclude Include="src\Gazel.h" />
     <ClInclude Include="src\Gazel\Core\Application.h" />
-    <ClInclude Include="src\Gazel\Core\Core.h" />
+    <ClInclude Include="src\Gazel\Core\Base.h" />
     <ClInclude Include="src\Gazel\Core\EntryPoint.h" />
     <ClInclude Include="src\Gazel\Core\Input.h" />
     <ClInclude Include="src\Gazel\Core\KeyCodes.h" />
@@ -169,6 +169,7 @@
     <ClInclude Include="src\Gazel\Renderer\Buffer.h" />
     <ClInclude Include="src\Gazel\Renderer\Camera.h" />
     <ClInclude Include="src\Gazel\Renderer\EditorCamera.h" />
+    <ClInclude Include="src\Gazel\Renderer\Framebuffer.h" />
     <ClInclude Include="src\Gazel\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Gazel\Renderer\OrthographicCamera.h" />
     <ClInclude Include="src\Gazel\Renderer\OrthographicCameraController.h" />
@@ -184,6 +185,7 @@
     <ClInclude Include="src\Gazel\Scene\Components.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h" />
@@ -619,6 +621,7 @@
     <ClCompile Include="src\Gazel\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Gazel\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Gazel\Renderer\EditorCamera.cpp" />
+    <ClCompile Include="src\Gazel\Renderer\Framebuffer.cpp" />
     <ClCompile Include="src\Gazel\Renderer\GraphicsContext.cpp" />
     <ClCompile Include="src\Gazel\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Gazel\Renderer\OrthographicCameraController.cpp" />
@@ -633,6 +636,7 @@
     <ClCompile Include="src\Gazel\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp" />

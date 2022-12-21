@@ -1,7 +1,7 @@
 #pragma once
 #include"gzpch.h"
 
-#include"Gazel/Core/Core.h"
+#include"Gazel/Core/Base.h"
 #include"Gazel/Events/Event.h"
 
 namespace Gazel {

@@ -1,5 +1,5 @@
 #pragma once
-#include"Gazel/Core/Core.h"
+#include"Gazel/Core/Base.h"
 
 #include<string>
 
@@ -23,6 +23,7 @@ namespace Gazel {
     virtual bool IsLoaded() const = 0;
 
     virtual bool operator==(const Texture& other) const = 0;
+
   };
 
   class Texture2D : public Texture

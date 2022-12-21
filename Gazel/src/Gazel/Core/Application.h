@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Gazel/Core/Core.h"
+#include "Gazel/Core/Base.h"
 
 #include "Gazel/Core/Window.h"
 #include "Gazel/Core/LayerStack.h"
@@ -28,6 +28,7 @@ namespace Gazel {
 
     inline Window& GetWindow() { return *m_Window; }
 
+    void Close();
     inline static Application& Get() { return *s_Instance; }
   private:
     bool OnWindowClose(WindowCloseEvent& e);

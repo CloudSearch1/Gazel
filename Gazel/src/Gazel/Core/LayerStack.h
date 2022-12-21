@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Gazel/Core/Core.h"
+#include "Gazel/Core/Base.h"
 #include "Gazel/Core/Layer.h"
 
 #include <vector>

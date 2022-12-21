@@ -66,7 +66,7 @@
     <ClInclude Include="src\Gazel\Core\Application.h">
       <Filter>src\Gazel\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gazel\Core\Core.h">
+    <ClInclude Include="src\Gazel\Core\Base.h">
       <Filter>src\Gazel\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Gazel\Core\EntryPoint.h">
@@ -1447,6 +1447,12 @@
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
     <ClInclude Include="src\Gazel\Renderer\EditorCamera.h" />
+    <ClInclude Include="src\Gazel\Renderer\Framebuffer.h">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gazel\Core\Application.cpp">
@@ -1540,5 +1546,11 @@
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
     <ClCompile Include="src\Gazel\Renderer\EditorCamera.cpp" />
+    <ClCompile Include="src\Gazel\Renderer\Framebuffer.cpp">
+      <Filter>src\Gazel\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

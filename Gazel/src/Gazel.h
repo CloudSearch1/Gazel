@@ -21,6 +21,7 @@
 #include"Gazel/Renderer/Buffer.h"
 #include"Gazel/Renderer/Texture.h"
 #include"Gazel/Renderer/Shader.h"
+#include"Gazel/Renderer/Framebuffer.h"
 #include"Gazel/Renderer/VertexArray.h"
 
 #include"Gazel/Renderer/OrthographicCamera.h"

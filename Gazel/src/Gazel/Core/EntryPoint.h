@@ -16,6 +16,6 @@ int main(int argc, char** argv)
 	auto app = Gazel::CreateApplication();
 	app->Run();
 	delete app;
-}
 
+}
 #endif 
