@@ -63,22 +63,24 @@ namespace Gazel {
     dispatcher.Dispatch<WindowResizeEvent>(GZ_BIND_EVENT_FN(OrthographicCameraController::OnWindowResized));
   }
 
+  void OrthographicCameraController::OnResize(float width, float height)
+  {
+    m_AspectRatio = width / height;
+    m_Camera.SetProjection(-m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);
+  }
+
+
   bool OrthographicCameraController::OnMouseScrolled(MouseScrolledEvent& e)
   {
     m_ZoomLevel -= e.GetYOffset() * 0.25f;
     m_ZoomLevel = std::max(m_ZoomLevel, 0.25f);
-    m_Bounds = { -m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel };//to Delete
-    m_Camera.SetProjection(m_Bounds.Left, m_Bounds.Right, m_Bounds.Bottom, m_Bounds.Top);
-    //m_Camera.SetProjection(-m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);
+    m_Camera.SetProjection(-m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);
     return false;
   }
 
   bool OrthographicCameraController::OnWindowResized(WindowResizeEvent& e)
   {
-    m_AspectRatio = (float)e.GetWidth() / (float)e.GetHeight();
-    m_Bounds = { -m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel };//to Delete
-    m_Camera.SetProjection(m_Bounds.Left, m_Bounds.Right, m_Bounds.Bottom, m_Bounds.Top);
-    //m_Camera.SetProjection(-m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);
+    OnResize((float)e.GetWidth(), (float)e.GetHeight());
     return false;
   }
 

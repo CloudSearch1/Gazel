@@ -1,5 +1,5 @@
 workspace "Gazel"
-	startproject "Sandbox"
+	startproject "Gazelnut"
 	architecture "x64"
 
 
@@ -94,9 +94,8 @@ project "Gazel"
 		buildoptions"/MD"
 		optimize "on" 
 
-
-project"Gazel-Editor"
-	location"Gazel-Editor"
+project"Sandbox"
+	location"Sandbox"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++17"
@@ -104,12 +103,12 @@ project"Gazel-Editor"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-
+	
 	files{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
-		
-	}
+
+		}
 
 	includedirs{
 		"Gazel/vendor/spdlog/include",
@@ -117,52 +116,52 @@ project"Gazel-Editor"
 		"Gazel/vendor",
 		"%{IncludeDir.glm}"
 	}
-
+	
 	links{
 		"Gazel"
 	}
-
-	filter "system:windows"
 	
+	filter "system:windows"
+
 		staticruntime "On"
 		systemversion "latest"
-		
+	
 		defines
 		{
 			"GZ_PLATFORM_WINDOWS"
 		}
-		
+	
 	filter "configurations:Debug"
 		defines "GZ_DEBUG"
 		buildoptions"/MDd"
 		symbols "on"
-
+	
 	filter "configurations:Release"
 		defines "GZ_RELEASE"
 		buildoptions"/MD"
 		optimize "on"
-
+	
 	filter "configurations:Dist"
 		defines "GZ_DIST"
 		buildoptions"/MD"
 		optimize "on"
 
-		project"Sandbox"
-		location"Sandbox"
-		kind "ConsoleApp"
-		language "C++"
-		cppdialect "C++17"
-		staticruntime"on"
+
+project"Gazelnut"
+	location"Gazelnut"
+	kind "ConsoleApp"
+	language "C++"
+	cppdialect "C++17"
+	staticruntime"on"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
-		targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-		objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-	
-		files{
-			"%{prj.name}/src/**.h",
-			"%{prj.name}/src/**.cpp"
-			
-		}
-	
+	files{
+		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.cpp"	
+	}
+		
 		includedirs{
 			"Gazel/vendor/spdlog/include",
 			"Gazel/src",
@@ -173,17 +172,17 @@ project"Gazel-Editor"
 		links{
 			"Gazel"
 		}
-	
-		filter "system:windows"
 		
+		filter "system:windows"
+	
 			staticruntime "On"
 			systemversion "latest"
-			
+	
 			defines
 			{
 				"GZ_PLATFORM_WINDOWS"
 			}
-			
+	
 		filter "configurations:Debug"
 			defines "GZ_DEBUG"
 			buildoptions"/MDd"
@@ -198,4 +197,3 @@ project"Gazel-Editor"
 			defines "GZ_DIST"
 			buildoptions"/MD"
 			optimize "on"
-	

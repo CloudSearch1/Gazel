@@ -7,22 +7,22 @@
 namespace Gazel
 {
 
-  class GazelEditor : public Application
+  class Gazelnut : public Application
   {
   public:
-    GazelEditor()
+    Gazelnut()
+      :Application("Gazelnut")
     {
       PushLayer(new EditorLayer());
     }
 
-    ~GazelEditor()
+    ~Gazelnut()
     {
     }
   };
 
   Application* CreateApplication()
   {
-    return new GazelEditor();
+    return new Gazelnut();
   }
-
 }
