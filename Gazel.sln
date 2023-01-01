@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImGui", "Gazel\vendor\imgui
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gazel", "Gazel\Gazel.vcxproj", "{18113B0D-8425-63BE-4DA7-061EB97A5FEF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gazel-Editor", "Gazel-Editor\Gazel-Editor.vcxproj", "{CCA96732-B80C-F7D6-6192-2F8D4DD4C259}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -50,6 +52,12 @@ Global
 		{18113B0D-8425-63BE-4DA7-061EB97A5FEF}.Dist|x64.Build.0 = Dist|x64
 		{18113B0D-8425-63BE-4DA7-061EB97A5FEF}.Release|x64.ActiveCfg = Release|x64
 		{18113B0D-8425-63BE-4DA7-061EB97A5FEF}.Release|x64.Build.0 = Release|x64
+		{CCA96732-B80C-F7D6-6192-2F8D4DD4C259}.Debug|x64.ActiveCfg = Debug|x64
+		{CCA96732-B80C-F7D6-6192-2F8D4DD4C259}.Debug|x64.Build.0 = Debug|x64
+		{CCA96732-B80C-F7D6-6192-2F8D4DD4C259}.Dist|x64.ActiveCfg = Dist|x64
+		{CCA96732-B80C-F7D6-6192-2F8D4DD4C259}.Dist|x64.Build.0 = Dist|x64
+		{CCA96732-B80C-F7D6-6192-2F8D4DD4C259}.Release|x64.ActiveCfg = Release|x64
+		{CCA96732-B80C-F7D6-6192-2F8D4DD4C259}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

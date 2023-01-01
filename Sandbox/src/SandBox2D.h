@@ -2,8 +2,6 @@
 
 #include "Gazel.h"
 
-#include"particleEffects.h"
-
 class Sandbox2D : public Gazel::Layer
 {
 public:
@@ -14,7 +12,6 @@ public:
   virtual void OnDetach() override;
 
   void OnUpdate(Gazel::Timestep ts) override;
-
   virtual void OnImGuiRender() override;
   void OnEvent(Gazel::Event& e) override;
 private:
@@ -26,10 +23,5 @@ private:
 
   Gazel::Ref<Gazel::Texture2D> m_CheckerboardTexture;
 
-  Gazel::Ref<Gazel::Framebuffer> m_Framebuffer;
-
   glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
-
-  ParticleEffects m_ParticleEffects;
-  ParticleEffectsProps m_ParticlesEffectsProps;
 };

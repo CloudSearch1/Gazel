@@ -617,6 +617,7 @@
     <ClCompile Include="src\Gazel\Core\Layer.cpp" />
     <ClCompile Include="src\Gazel\Core\LayerStack.cpp" />
     <ClCompile Include="src\Gazel\Core\Log.cpp" />
+    <ClCompile Include="src\Gazel\Core\Window.cpp" />
     <ClCompile Include="src\Gazel\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Gazel\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Gazel\Renderer\Buffer.cpp" />

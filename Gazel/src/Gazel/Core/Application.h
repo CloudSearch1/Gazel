@@ -16,7 +16,7 @@ namespace Gazel {
   class Application
   {
   public:
-    Application();
+    Application(const std::string& name = "Gazel App");
     virtual ~Application();
 
     void Run();

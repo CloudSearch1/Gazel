@@ -94,8 +94,9 @@ project "Gazel"
 		buildoptions"/MD"
 		optimize "on" 
 
-project"Sandbox"
-	location"Sandbox"
+
+project"Gazel-Editor"
+	location"Gazel-Editor"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++17"
@@ -145,3 +146,56 @@ project"Sandbox"
 		defines "GZ_DIST"
 		buildoptions"/MD"
 		optimize "on"
+
+		project"Sandbox"
+		location"Sandbox"
+		kind "ConsoleApp"
+		language "C++"
+		cppdialect "C++17"
+		staticruntime"on"
+	
+		targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+		objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	
+		files{
+			"%{prj.name}/src/**.h",
+			"%{prj.name}/src/**.cpp"
+			
+		}
+	
+		includedirs{
+			"Gazel/vendor/spdlog/include",
+			"Gazel/src",
+			"Gazel/vendor",
+			"%{IncludeDir.glm}"
+		}
+	
+		links{
+			"Gazel"
+		}
+	
+		filter "system:windows"
+		
+			staticruntime "On"
+			systemversion "latest"
+			
+			defines
+			{
+				"GZ_PLATFORM_WINDOWS"
+			}
+			
+		filter "configurations:Debug"
+			defines "GZ_DEBUG"
+			buildoptions"/MDd"
+			symbols "on"
+	
+		filter "configurations:Release"
+			defines "GZ_RELEASE"
+			buildoptions"/MD"
+			optimize "on"
+	
+		filter "configurations:Dist"
+			defines "GZ_DIST"
+			buildoptions"/MD"
+			optimize "on"
+	
